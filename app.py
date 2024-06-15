@@ -49,8 +49,8 @@ def get_vectorstore(text_chunks):
 
 def get_conversation_chain(vectorstore):
     model = "llama3"
-    llm = Ollama(model = model)
-    #llm = HuggingFaceHub(repo_id = "google/flan-t5-base", model_kwargs = {"temperature": 0.4, "max_length": 512})
+    #llm = Ollama(model = model)
+    llm = HuggingFaceHub(repo_id = "google/flan-t5-base", model_kwargs = {"temperature": 0.4, "max_length": 512})
     memory = ConversationBufferMemory(memory_key = 'chat_history', return_messages = True)
 
     # # Load the vector store from the specified path
