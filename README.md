@@ -1,4 +1,4 @@
-# DocuMate
+# DocuMate 📚
 
 DocuMate is an advanced Retrieval-Augmented Generation (RAG) application built with Streamlit, enabling users to upload multiple documents and engage in interactive chat sessions. The application leverages state-of-the-art NLP models from Hugging Face and Ollama for document understanding and response generation, maintaining a chat history for a seamless conversation flow.
 
