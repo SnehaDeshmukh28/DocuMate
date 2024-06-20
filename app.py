@@ -37,14 +37,14 @@ def get_text_chunks(text):
 def get_vectorstore(text_chunks):
     embeddings = HuggingFaceInstructEmbeddings(model_name = "hkunlp/instructor-large")
     #embeddings = OllamaEmbeddings()
-    # print("Embeddings created")
+    print("Embeddings created")
     vectorstore = FAISS.from_texts(texts = text_chunks, embedding = embeddings)
 
     # save the embeddings into FAISS vector store
     save_path = "./vector_store/faiss_index"
     vectorstore.save_local(save_path)
 
-    # print("Stored in VectorDB!")
+    print("Stored in VectorDB!")
     return vectorstore
 
 def get_conversation_chain(vectorstore):
